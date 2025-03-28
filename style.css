@@ -43,20 +43,17 @@ body {
     z-index: 1;
 }
 
-.collapsible label:after{
-    content:"";
+.arrow-icon {
+    transition: transform 0.3s ease, fill 0.3s ease;
     position: absolute;
     right: 15px;
-    top:20px;
-    width: 22px;
-    height: 22px;
-    background: url(./reshot-icon-arrow-diagonal-up-right-circle-5M2VF3WQZJ.svg) no-repeat 0 0;
-    transition: all 1s ease;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: rgb(238, 237, 237);
 }
-.collapsible input:checked + label:after{
-    transform: rotate(-180deg);
-
-
+.collapsible input:checked + label .arrow-icon {
+    transform: translateY(-50%) rotate(-180deg);
+    fill: #93c26f
 }
 
 .collapsible-text {
